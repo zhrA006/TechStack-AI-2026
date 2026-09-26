@@ -1,0 +1,142 @@
+<!doctype html>
+    <html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tech Stack AI · Week 04 Resource Hub</title>
+    <meta name="description" content="Resources for logistic regression, decision trees, random forests, and overfitting.">
+    <style>
+
+:root{
+  --bg:#0b1020;--panel:#11182b;--panel2:#151f36;--text:#eef3ff;--muted:#aab5cc;
+  --line:rgba(255,255,255,.09);--accent:#8b7cff;--accent2:#42d6c5;--gold:#ffc857;
+  --shadow:0 20px 60px rgba(0,0,0,.28);--radius:20px;
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:
+radial-gradient(circle at 10% 0%,rgba(139,124,255,.18),transparent 30%),radial-gradient(circle at 90% 10%,rgba(66,214,197,.14),transparent 26%),var(--bg);color:var(--text);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.container{width:min(1120px,calc(100% - 32px));margin:0 auto}
+.hero{padding:72px 0 36px}
+.kicker{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.04);color:#d9ddff;font-size:.84rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+h1{font-size:clamp(2.5rem,7vw,5.5rem);line-height:.98;letter-spacing:-.05em;max-width:900px;margin:22px 0 18px}
+.gradient{background:linear-gradient(90deg,#fff 10%,#bcb4ff 52%,#83eadb 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:1.1rem;color:var(--muted);max-width:760px;margin:0 0 26px}
+.trust{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px;color:#c8d0e3;font-size:.9rem}.trust span{padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.035);border:1px solid var(--line)}
+.sticky{position:sticky;top:0;z-index:10;background:rgba(11,16,32,.78);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.nav{display:flex;gap:8px;overflow:auto;padding:10px 0}.nav a{white-space:nowrap;padding:8px 12px;border-radius:10px;color:#c7d0e5;font-weight:700;font-size:.9rem}.nav a:hover{background:rgba(255,255,255,.06);color:#fff}
+.section{padding:54px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:18px}.section h2{font-size:2rem;letter-spacing:-.03em;margin:0}.section p.intro{margin:7px 0 0;color:var(--muted);max-width:720px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.card{background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.02));border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+.card.featured{border-color:rgba(139,124,255,.3);background:linear-gradient(135deg,rgba(139,124,255,.11),rgba(66,214,197,.045))}
+.meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}.tag{font-size:.72rem;font-weight:850;letter-spacing:.05em;text-transform:uppercase;padding:5px 8px;border-radius:999px;background:rgba(255,255,255,.07);color:#dbe3f7}.tag.beginner{color:#bcfff5;background:rgba(66,214,197,.11)}.tag.video{color:#d0caff;background:rgba(139,124,255,.12)}.tag.official{color:#ffe3a2;background:rgba(255,200,87,.1)}.tag.essential{color:#fff3c7;background:rgba(255,200,87,.16);border:1px solid rgba(255,200,87,.28)}.tag.optional{color:#bfe8ff;background:rgba(87,180,255,.11);border:1px solid rgba(87,180,255,.22)}.card.essential{border-color:rgba(255,200,87,.42);box-shadow:0 22px 65px rgba(0,0,0,.3),0 0 0 1px rgba(255,200,87,.06)}.card.essential h3{padding-right:8px}
+.card h3{margin:0 0 7px;font-size:1.15rem}.card p{margin:0 0 15px;color:var(--muted);font-size:.96rem}.link{display:inline-flex;align-items:center;gap:7px;font-weight:800;color:#fff}.link:hover{color:#9df4e8}.arrow{transition:.2s}.link:hover .arrow{transform:translateX(3px)}.link-row{display:flex;flex-wrap:wrap;gap:12px 18px}
+footer{padding:42px 0 60px;color:#8894ae;border-top:1px solid var(--line);font-size:.88rem}.sources{font-size:.82rem;color:#75819a;margin-top:10px}
+@media(max-width:780px){.grid{grid-template-columns:1fr}.section-head{align-items:start;flex-direction:column}.hero{padding-top:48px}.card{padding:18px}}
+
+    </style>
+    </head>
+    <body>
+    <header class="hero" id="top">
+      <div class="container">
+        <span class="kicker">Tech Stack AI · Week 04</span>
+        <h1>Learn the models.<br><span class="gradient">Understand the fit.</span></h1>
+        <p class="lead">Resources for logistic regression, decision trees, random forests, and overfitting.</p>
+        <div class="trust"><span>Beginner-friendly</span><span>Videos + references</span><span>Week 04</span></div>
+      </div>
+    </header>
+
+    <div class="sticky"><div class="container"><nav class="nav" aria-label="Sections">
+      <a href="#logistic-regression">Logistic regression</a><a href="#decision-tree">Decision trees</a><a href="#random-forest">Random forests</a><a href="#overfitting">Overfitting &amp; underfitting</a>
+    </nav></div></div>
+
+    <main>
+
+
+
+<section class="section" id="logistic-regression"><div class="container">
+  <div class="section-head"><div><h2>01 · Logistic regression</h2><p class="intro">Binary classification, probabilities, decision boundaries, and regularization.</p></div></div>
+  <div class="grid">
+    <article class="card featured essential">
+      <div class="meta"><span class="tag essential">Essential · Watch</span><span class="tag official">Coursera</span><span class="tag beginner">Week 3</span></div>
+      <h3>Supervised Machine Learning — Week 3: Classification</h3>
+      <p>Andrew Ng’s Week 3 introduces logistic regression, decision boundaries, the cost function, gradient descent, and regularization.</p>
+      <a class="link" target="_blank" rel="noopener" href="https://www.coursera.org/learn/machine-learning/">Open Week 3 <span class="arrow">→</span></a>
+    </article>
+  </div>
+</div></section>
+
+<section class="section" id="decision-tree"><div class="container">
+  <div class="section-head"><div><h2>02 · Decision trees</h2><p class="intro">Tree structure, splitting, classification, and the basics of how trees make predictions.</p></div></div>
+  <div class="grid">
+    <article class="card featured essential">
+      <div class="meta"><span class="tag essential">Essential · Watch</span><span class="tag video">YouTube</span><span class="tag beginner">StatQuest</span></div>
+      <h3>Decision and Classification Trees, Clearly Explained!!! — StatQuest</h3>
+      <p>A step-by-step visual explanation of decision trees, including Gini impurity, splitting, branches, and predictions.</p>
+      <a class="link" target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=_L39rN6gz7Y">Watch the video <span class="arrow">→</span></a>
+    </article>
+    <article class="card">
+      <div class="meta"><span class="tag beginner">Reference</span><span class="tag official">GeeksforGeeks</span></div>
+      <h3>Decision Tree in Machine Learning — GeeksforGeeks</h3>
+      <p>A written guide to decision trees, their structure, splitting criteria, and classification and regression use cases.</p>
+      <a class="link" target="_blank" rel="noopener" href="https://www.geeksforgeeks.org/machine-learning/decision-tree-introduction-example/">Open the tutorial <span class="arrow">→</span></a>
+    </article>
+    <article class="card">
+      <div class="meta"><span class="tag optional">Optional</span><span class="tag official">Dr. Mehran Safayani</span></div>
+      <h3>Additional Course Videos — Dr. Mehran Safayani</h3>
+      <p>Optional course material for a deeper look at decision trees and random forests.</p>
+      <div class="link-row">
+        <a class="link" target="_blank" rel="noopener" href="https://www.aparat.com/v/oxoeczr">Video 1 <span class="arrow">→</span></a>
+        <a class="link" target="_blank" rel="noopener" href="https://www.aparat.com/v/iryxxbv">Video 2 <span class="arrow">→</span></a>
+        <a class="link" target="_blank" rel="noopener" href="https://www.aparat.com/v/tll12dn">Video 3 <span class="arrow">→</span></a>
+      </div>
+    </article>
+  </div>
+</div></section>
+
+<section class="section" id="random-forest"><div class="container">
+  <div class="section-head"><div><h2>03 · Random forests</h2><p class="intro">Ensembles of decision trees, bagging, random feature selection, and prediction.</p></div></div>
+  <div class="grid">
+    <article class="card featured essential">
+      <div class="meta"><span class="tag essential">Essential · Watch</span><span class="tag video">YouTube</span><span class="tag beginner">StatQuest</span></div>
+      <h3>Random Forests Part 1 — StatQuest</h3>
+      <p>A visual introduction to building, using, and evaluating random forests, including bootstrapping and random feature selection.</p>
+      <a class="link" target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=J4Wdy0Wc_xQ">Watch the video <span class="arrow">→</span></a>
+    </article>
+    <article class="card">
+      <div class="meta"><span class="tag beginner">Reference</span><span class="tag official">GeeksforGeeks</span></div>
+      <h3>Random Forest Algorithm in Machine Learning — GeeksforGeeks</h3>
+      <p>A written overview of random forests, how multiple trees are built, and how their predictions are combined.</p>
+      <a class="link" target="_blank" rel="noopener" href="https://www.geeksforgeeks.org/machine-learning/random-forest-algorithm-in-machine-learning/">Open the tutorial <span class="arrow">→</span></a>
+    </article>
+    <article class="card">
+      <div class="meta"><span class="tag optional">Optional</span><span class="tag official">Dr. Mehran Safayani</span></div>
+      <h3>Random Forests — Dr. Mehran Safayani</h3>
+      <p>Optional course material on random forests.</p>
+      <a class="link" target="_blank" rel="noopener" href="https://www.aparat.com/v/tll12dn?playlist=23788454">Watch the video <span class="arrow">→</span></a>
+    </article>
+  </div>
+</div></section>
+
+<section class="section" id="overfitting"><div class="container">
+  <div class="section-head"><div><h2>04 · Overfitting &amp; underfitting</h2><p class="intro">Model complexity, generalization, bias, variance, and ways to address overfitting.</p></div></div>
+  <div class="grid">
+    <article class="card featured essential">
+      <div class="meta"><span class="tag essential">Essential · Watch</span><span class="tag official">Coursera</span><span class="tag beginner">Week 3</span></div>
+      <h3>Supervised Machine Learning — Week 3: The Problem of Overfitting</h3>
+      <p>Andrew Ng’s Week 3 introduces overfitting and the use of regularization to improve generalization.</p>
+      <a class="link" target="_blank" rel="noopener" href="https://www.coursera.org/learn/machine-learning/">Open Week 3 <span class="arrow">→</span></a>
+    </article>
+    <article class="card">
+      <div class="meta"><span class="tag video">YouTube</span><span class="tag beginner">StatQuest</span></div>
+      <h3>Machine Learning Fundamentals: Bias and Variance — StatQuest</h3>
+      <p>A clear explanation of bias, variance, training versus testing performance, and overfitting.</p>
+      <a class="link" target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=EuBBz3bI-aA">Watch the video <span class="arrow">→</span></a>
+    </article>
+  </div>
+</div></section>
+
+    </main>
+
+    <footer><div class="container"><strong>Tech Stack AI · Week 04</strong><div class="sources">Week 04 resources.</div></div></footer>
+    </body>
+    </html>
